@@ -1709,17 +1709,38 @@ section {
   color: #CBD5E1;
   font-size: 0.875rem;
   line-height: 1.6;
-  max-width: 360px;
-  margin: 0 auto 16px auto;
-  text-align: center;
+  max-width: 380px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 992px) {
+  .footer-lead-text {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+  .footer-brand-container {
+    align-self: flex-start;
+  }
+  .footer-social-row {
+    justify-content: flex-start;
+  }
+  .footer-links {
+    text-align: left;
+  }
+  .footer-links li {
+    text-align: left;
+  }
+  .footer-col-title {
+    text-align: left;
+  }
 }
 
 .footer-social-row {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .footer-social-btn {
