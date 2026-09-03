@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFRC RELIEF — Global Disaster Relief & Emergency Response Operations</title>
+  <meta name="description" content="Official Disaster Relief & Emergency Response Operations Portal. Real-time humanitarian appeals, emergency deployments, global disaster tracking, and field reports.">
+  <meta name="theme-color" content="#E00000">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <!-- Google Fonts: Manrope & DM Serif Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Leaflet 1.9.4 CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Swiper 11 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- 1. INTEGRATED OPERATIONS COMMAND HEADER & UNIQUE FLOATING NAVBAR -->
+  <header class="operations-master-header" id="masterHeader">
+    
+    <!-- Top Operations Command Ribbon -->
+    <div class="top-command-ribbon">
+      <div class="container-fluid px-lg-5 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <div class="surge-radar-pill">
+            <span class="surge-pulse-ring"></span>
+            <span class="surge-dot"></span>
+            <span class="surge-text">OPS ACTIVE: LEVEL 3</span>
+          </div>
+          <div class="ribbon-ticker-text d-none d-sm-block">
+            <span class="text-white-50">Active Surge:</span> 
+            <span class="text-white fw-bold">Middle East, Horn of Africa & Southeast Asia Inundation Relief</span>
+            <a href="#emergency-appeals" class="ribbon-action-link ms-2">SitRep & Live Feed <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:+41227304222" class="ribbon-hotline-pill d-none d-md-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone-volume text-danger"></i>
+            <span>Duty Hotline: <strong>+41 22 730 4222</strong></span>
+          </a>
+          <span class="ribbon-divider d-none d-md-inline"></span>
+          <div class="ribbon-badge-societies d-none d-lg-flex align-items-center gap-1">
+            <i class="fa-solid fa-globe text-primary"></i>
+            <span>191 Societies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unique Floating Command Capsule Navigation Bar -->
+    <nav class="command-capsule-navbar" aria-label="Main Operations Navigation">
+      <div class="container-fluid px-lg-5">
+        <div class="navbar-glass-shell d-flex align-items-center justify-content-between">
+          
+          <!-- Logo & Operations Identity -->
+          <a class="brand-command-container" href="#top">
+            <div class="brand-crest-box">
+              <i class="fa-solid fa-square-plus"></i>
+              <span class="crest-live-dot"></span>
+            </div>
+            <div class="brand-meta">
+              <span class="brand-core-title">IFRC <span class="text-danger">RELIEF</span></span>
+              <span class="brand-core-tag">Global Emergency Command</span>
+            </div>
+          </a>
+
+          <!-- Center Interactive Segmented Nav Pills (Hidden on <= 1024px) -->
+          <div class="nav-segmented-capsule desktop-nav-menu">
+            <a href="#top" class="capsule-nav-item active">
+              <i class="fa-solid fa-house-chimney fa-xs"></i>
+              <span>Home</span>
+            </a>
+            <a href="#about-us" class="capsule-nav-item">
+              <i class="fa-solid fa-circle-info fa-xs"></i>
+              <span>About</span>
+            </a>
+            <a href="#disaster-map-section" class="capsule-nav-item">
+              <i class="fa-solid fa-map-location-dot fa-xs"></i>
+              <span>Disaster Map</span>
+            </a>
+            <a href="#emergency-appeals" class="capsule-nav-item">
+              <i class="fa-solid fa-bolt fa-xs"></i>
+              <span>Appeals</span>
+            </a>
+            <a href="#relief-programs" class="capsule-nav-item">
+              <i class="fa-solid fa-hand-holding-hand fa-xs"></i>
+              <span>Programs</span>
+            </a>
+            <a href="#photojournalism-gallery" class="capsule-nav-item">
+              <i class="fa-solid fa-camera-retro fa-xs"></i>
+              <span>Field Gallery</span>
+            </a>
+            <a href="#stories-news" class="capsule-nav-item">
+              <i class="fa-solid fa-newspaper fa-xs"></i>
+              <span>Stories</span>
+            </a>
+            <a href="#contact-operations" class="capsule-nav-item">
+              <i class="fa-solid fa-headset fa-xs"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+
+          <!-- Right Action Hub (Hidden on <= 1024px) -->
+          <div class="desktop-header-actions d-flex align-items-center gap-2">
+            <a href="#emergency-appeals" class="btn-appeal-glass">
+              <i class="fa-solid fa-bolt text-warning"></i>
+              <span>Appeals</span>
+            </a>
+            <a href="#donate-gateway" class="btn-donate-pulse">
+              <i class="fa-solid fa-heart"></i>
+              <span>Donate</span>
+              <span class="btn-shine"></span>
+            </a>
+          </div>
+
+          <!-- HAMBURGER BUTTON ONLY (Visible strictly on <= 1024px) -->
+          <button class="hamburger-toggle-btn command-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle Operations Navigation Menu">
+            <span class="hamburger-lines">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </span>
+            <span class="hamburger-label d-none d-sm-inline">MENU</span>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- MOBILE / TABLET OFFCANVAS DRAWER (All menu items housed inside) -->
+  <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-symbol" style="width:36px; height:36px; font-size:1rem;">
+          <i class="fa-solid fa-square-plus"></i>
+        </div>
+        <div>
+          <h5 class="offcanvas-title text-white font-sans fw-bold mb-0" id="mobileNavDrawerLabel">IFRC <span class="text-danger">RELIEF</span></h5>
+          <small class="text-muted" style="font-size:0.65rem; text-transform:uppercase;">Global Emergency Command</small>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="#top" class="mobile-nav-link active">
+            <span><i class="fa-solid fa-house"></i> Home</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#about-us" class="mobile-nav-link">
+            <span><i class="fa-solid fa-circle-info"></i> About Us & Mandate</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#disaster-map-section" class="mobile-nav-link">
+            <span><i class="fa-solid fa-triangle-exclamation text-danger"></i> Emergency Operations</span>
+            <span class="badge bg-danger rounded-pill">142</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#emergency-appeals" class="mobile-nav-link">
+            <span><i class="fa-solid fa-bolt text-warning"></i> Active Emergency Appeals</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#relief-programs" class="mobile-nav-link">
+            <span><i class="fa-solid fa-hand-holding-hand"></i> Relief Programs</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#photojournalism-gallery" class="mobile-nav-link">
+            <span><i class="fa-solid fa-camera-retro"></i> Field Photojournalism</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#operations-analytics" class="mobile-nav-link">
+            <span><i class="fa-solid fa-chart-pie"></i> Analytics & Impact</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#stories-news" class="mobile-nav-link">
+            <span><i class="fa-solid fa-newspaper"></i> Stories & Field News</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#contact-operations" class="mobile-nav-link">
+            <span><i class="fa-solid fa-headset"></i> Contact & Dispatch Desk</span>
+            <i class="fa-solid fa-chevron-right fa-xs text-muted"></i>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#donate-gateway" class="mobile-nav-link" style="color: #FF6B6B; font-weight: 700;">
+            <span><i class="fa-solid fa-heart text-danger"></i> Donate & Emergency Appeal</span>
+            <i class="fa-solid fa-arrow-right fa-xs"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="p-3 border-top border-secondary border-opacity-25 bg-dark">
+        <a href="#donate-gateway" class="btn btn-ifrc-red w-100 mb-2 text-center justify-content-center">
+          <i class="fa-solid fa-heart"></i> Make Rapid Donation
+        </a>
+        <div class="text-center text-muted" style="font-size: 0.75rem;">
+          <i class="fa-solid fa-lock"></i> 256-Bit SSL Encrypted Humanitarian Portal
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. HERO SECTION -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay-grid"></div>
+      <div class="container-fluid px-lg-5 position-relative text-center" style="z-index: 2;">
+        
+        <!-- Hero Center Intro -->
+        <div class="max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <span class="hero-badge">
+              <i class="fa-solid fa-satellite-dish"></i> GLOBAL DISASTER TELEMETRY
+            </span>
+            <!-- Image 29 used as Live SitRep Indicator Badge -->
+            <div class="d-none d-sm-flex align-items-center gap-2 px-2 py-1 bg-dark bg-opacity-75 rounded-pill border border-secondary border-opacity-25">
+              <img src="image/suKWKQCGc9rSrrLLacwCPNL3OBW5fBJrvq-zfoyUUZskCZwT5ELNsUQsaEDj8Mb8-vZntGgPIIxF0j-xQP-mbM2qxTrHgn4-ZOc3ujPLAD2BMl03ojvCNSvXZkIBGb1rdQ4v7P9n_fbhRwJZrzKyJHye_00dT8EFI62-7HFz3cGEaoAxAC.jpg" alt="SitRep badge" style="width:22px; height:22px; border-radius:50%; object-fit:cover;">
+              <span class="small text-light" style="font-size: 0.75rem;">Active Response Mode</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title text-center mx-auto">
+            Mobilizing Rapid Relief <span>Where Crisis Strikes.</span>
+          </h1>
+          <p class="hero-subtitle text-center mx-auto">
+            The world’s largest humanitarian network delivering emergency medical aid, clean water, shelter, and trauma relief to communities devastated by natural disasters and armed conflicts.
+          </p>
+
+          <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-4">
+            <a href="#donate-gateway" class="btn-ifrc-red btn-lg">
+              <i class="fa-solid fa-heart"></i> Support Emergency Appeal
+            </a>
+            <a href="#disaster-map-section" class="btn-ifrc-outline-white btn-lg">
+              <i class="fa-solid fa-map-location-dot"></i> Live Operations Map
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center gap-3 text-white-50 flex-wrap" style="font-size: 0.8125rem;">
+            <span><i class="fa-solid fa-shield-halved text-success me-1"></i> UN Partner & DREF Certified</span>
+            <span>&bull;</span>
+            <span><i class="fa-solid fa-clock-rotate-left text-warning me-1"></i> Rapid 24hr Field Deployment</span>
+          </div>
+        </div>
+
+        <!-- Hero Operational Command Dashboard Card (Centered) -->
+        <div class="row justify-content-center mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-10 col-xl-8">
+            <div class="hero-command-card shadow-2xl mx-auto">
+              <div class="hero-command-header d-flex align-items-center justify-content-between p-3 border-bottom border-secondary border-opacity-25 bg-dark bg-opacity-50">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="pulse-dot"></span>
+                  <span class="text-white fw-bold small text-uppercase" style="letter-spacing:0.8px;">Global Surge Operations Desk</span>
+                </div>
+                <span class="badge bg-danger">Level 3 Active Surge</span>
+              </div>
+              
+              <div class="hero-command-body p-3 p-md-4 text-center">
+                <div class="hero-mission-img-wrap rounded-3 border border-secondary border-opacity-25 mx-auto" style="max-width: 760px;">
+                  <img src="image/suKWKQCGc9rSrrLLacwCPNL3OBW5fBJrvq-zfoyUUZskCZwT5ELNsUQsaEDj8Mb8-vZntGgPIIxF0j-xQP-mbM2qxTrHgn4-ZOc3ujPLAD2BMl03ojvCNSvXZkIBGb1rdQ4v7P9n_fbhRwJZrzKyJHye_00dT8EFI62-7HFz3cGEaoAxAC.jpg" alt="Active Disaster Relief Mission">
+                  <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-gradient-dark text-white text-center" style="background: linear-gradient(180deg, transparent 0%, rgba(11, 25, 44, 0.95) 100%);">
+                    <span class="badge bg-warning text-dark fw-bold mb-1">PRIORITY 1 DISPATCH</span>
+                    <h5 class="fw-bold mb-0 text-white fs-6 text-center">Middle East & Horn of Africa Multi-Hazard Airlift</h5>
+                  </div>
+                </div>
+
+                <!-- Live Mini Feeds -->
+                <div class="d-flex flex-column gap-2 mb-3 max-w-700 mx-auto">
+                  <div class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-dark bg-opacity-50 border border-secondary border-opacity-10 small">
+                    <span class="text-white-50"><i class="fa-solid fa-plane-departure text-danger me-2"></i>Emergency Airlift #IFRC-842</span>
+                    <span class="text-success fw-bold">En Route to Hub (1h 20m)</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-dark bg-opacity-50 border border-secondary border-opacity-10 small">
+                    <span class="text-white-50"><i class="fa-solid fa-kit-medical text-primary me-2"></i>Mobile Trauma Clinic EMT-2</span>
+                    <span class="text-warning fw-bold">Active in Field (1,420 Treated)</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between p-2 rounded-2 bg-dark bg-opacity-50 border border-secondary border-opacity-10 small">
+                    <span class="text-white-50"><i class="fa-solid fa-faucet-drip text-info me-2"></i>WASH Water Purification Units</span>
+                    <span class="text-info fw-bold">450,000L / Day Operational</span>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                  <a href="#emergency-appeals" class="btn btn-sm btn-ifrc-red text-center justify-content-center px-4">
+                    <i class="fa-solid fa-heart me-1"></i> Support Active Appeals
+                  </a>
+                  <a href="#disaster-map-section" class="btn btn-sm btn-ifrc-outline-white text-center justify-content-center px-4">
+                    <i class="fa-solid fa-map-location-dot me-1"></i> Operations Map
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Live Telemetry Counter Bar (Centered) -->
+        <div class="hero-telemetry-bar mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-3 text-center justify-content-center">
+            <div class="col-6 col-md-3 telemetry-item">
+              <div class="telemetry-val red counter-val text-center" data-target="142" data-prefix="" data-suffix="">142</div>
+              <div class="telemetry-label text-center"><i class="fa-solid fa-fire text-danger me-1"></i> Active Operations</div>
+            </div>
+            <div class="col-6 col-md-3 telemetry-item">
+              <div class="telemetry-val yellow counter-val text-center" data-target="18.4" data-prefix="" data-suffix="M">18.4M</div>
+              <div class="telemetry-label text-center"><i class="fa-solid fa-people-roof text-warning me-1"></i> People Targeted</div>
+            </div>
+            <div class="col-6 col-md-3 telemetry-item">
+              <div class="telemetry-val blue counter-val text-center" data-target="420" data-prefix="$" data-suffix="M">420M</div>
+              <div class="telemetry-label text-center"><i class="fa-solid fa-vault text-primary me-1"></i> Funding Mobilized</div>
+            </div>
+            <div class="col-6 col-md-3 telemetry-item">
+              <div class="telemetry-val green counter-val text-center" data-target="1.2" data-prefix="" data-suffix="M">1.2M</div>
+              <div class="telemetry-label text-center"><i class="fa-solid fa-hands-holding-child text-success me-1"></i> Volunteers on Ground</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. ABOUT US SECTION (Centered) -->
+    <section class="py-5 bg-white text-center" id="about-us">
+      <div class="container-fluid px-lg-5">
+        
+        <div class="max-w-700 mx-auto text-center mb-5" data-aos="fade-up">
+          <span class="section-tag"><i class="fa-solid fa-shield-heart"></i> Institutional Mandate</span>
+          <h2 class="display-6 fw-bold mb-3 text-center">Operating with Unconditional Humanity & Neutrality</h2>
+          <p class="text-secondary leading-relaxed mb-4 text-center">
+            As part of the International Red Cross and Red Crescent Movement, our mandate is to prevent and alleviate human suffering in the face of disasters, health emergencies, and armed conflicts without discrimination as to nationality, race, religious beliefs, class, or political opinions.
+          </p>
+        </div>
+
+        <div class="row justify-content-center gy-4 mb-5">
+          <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="50">
+            <div class="p-4 bg-light rounded-3 border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="brand-symbol mx-auto mb-3" style="width:48px; height:48px; font-size:1.3rem;">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-danger text-center">Rapid DREF Fund</h5>
+              <p class="small text-muted mb-0 text-center">Disaster Response Emergency Fund releases initial lifelines within 4 hours of disaster alert.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 bg-light rounded-3 border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="brand-symbol mx-auto mb-3" style="width:48px; height:48px; font-size:1.3rem; background: var(--navy-dark);">
+                <i class="fa-solid fa-plane-arrival"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-primary text-center">Global Logistics Hubs</h5>
+              <p class="small text-muted mb-0 text-center">Strategic pre-positioned relief stock in Dubai, Panama, Las Palmas, and Kuala Lumpur.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Feature Image & Badge -->
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div class="col-lg-8">
+            <div class="about-feature-img-wrap rounded-4 shadow-lg mx-auto" style="max-width: 760px;">
+              <img src="image/0N7RVD3qrt6b5qXkILxxjTajsQ3O2HKOAQ7yzWLq9zUeEDUB62S6KP96F1NNG98e1QX6zDDzFiJ2U-OUGt2n60aKwmLpkDEH77dHByp3MBKkzrhuvYHo7bXZFIfrr02nXFv-tIRBg24YUR_JsJOyAgx6c6fUWpWqYxq0OvBoDlD6TlLG0o.jpg" alt="Disaster Response Team on the ground">
+              <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 p-3 bg-white rounded-pill shadow border d-flex align-items-center gap-3" style="max-width: 320px; z-index: 3;">
+                <div class="brand-symbol mx-auto" style="width: 38px; height: 38px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-handshake-angle"></i>
+                </div>
+                <div class="text-start">
+                  <h6 class="mb-0 fw-bold">191 National Societies</h6>
+                  <small class="text-muted">Unbroken Global Alliance</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mb-5">
+          <a href="#relief-programs" class="btn-ifrc-navy mx-auto">
+            Explore Operational Capabilities <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <!-- 7 Fundamental Principles (Strict Center Alignment) -->
+        <div class="mt-5 pt-3">
+          <div class="text-center max-w-700 mx-auto mb-4">
+            <span class="section-tag"><i class="fa-solid fa-compass"></i> Guiding Ethics</span>
+            <h3 class="fw-bold text-center">The 7 Fundamental Principles</h3>
+          </div>
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+              <div class="principle-box">
+                <div class="principle-num">01</div>
+                <div class="principle-name">Humanity</div>
+                <p class="small text-muted mb-0 text-center">Preventing and alleviating human suffering wherever found.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="principle-box">
+                <div class="principle-num">02</div>
+                <div class="principle-name">Impartiality</div>
+                <p class="small text-muted mb-0 text-center">No discrimination as to race, nationality, or political views.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+              <div class="principle-box">
+                <div class="principle-num">03</div>
+                <div class="principle-name">Neutrality</div>
+                <p class="small text-muted mb-0 text-center">Maintaining public trust by not taking sides in armed conflicts.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="principle-box">
+                <div class="principle-num">04</div>
+                <div class="principle-name">Independence</div>
+                <p class="small text-muted mb-0 text-center">Autonomy from governmental and political pressure.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+              <div class="principle-box">
+                <div class="principle-num">05</div>
+                <div class="principle-name">Voluntary</div>
+                <p class="small text-muted mb-0 text-center">Prompted by desire to serve, never by gain or profit.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="principle-box">
+                <div class="principle-num">06</div>
+                <div class="principle-name">Unity</div>
+                <p class="small text-muted mb-0 text-center">One National Society per nation, open to all citizens.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+              <div class="principle-box">
+                <div class="principle-num">07</div>
+                <div class="principle-name">Universality</div>
+                <p class="small text-muted mb-0 text-center">Worldwide solidarity in sharing equal responsibilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE DISASTER OPERATIONS & IMPACT MAP (Centered) -->
+    <section class="py-5" id="disaster-map-section" style="background-color: #EEF2F6;">
+      <div class="container-fluid px-lg-5 text-center">
+        
+        <div class="max-w-700 mx-auto text-center mb-4">
+          <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Live Operations Tracker</span>
+          <h2 class="display-6 fw-bold mb-2 text-center">Global Disaster & Crisis Response Map</h2>
+          <p class="text-secondary mb-3 text-center">Filter active emergency appeals, DREF deployments, and localized relief efforts worldwide.</p>
+          <div class="d-flex align-items-center justify-content-center gap-2">
+            <span class="badge bg-danger p-2"><i class="fa-solid fa-satellite"></i> Live GPS Feed</span>
+            <span class="text-muted small">Updated every 15 minutes</span>
+          </div>
+        </div>
+
+        <div class="map-container-card">
+          <!-- Floating Category Filter -->
+          <div class="map-filter-panel">
+            <div class="map-filter-btn-group">
+              <button class="map-filter-chip active-red" data-filter="all">All Emergencies</button>
+              <button class="map-filter-chip" data-filter="earthquake"><i class="fa-solid fa-house-crack text-danger"></i> Earthquakes</button>
+              <button class="map-filter-chip" data-filter="flood"><i class="fa-solid fa-water text-primary"></i> Floods / Storms</button>
+              <button class="map-filter-chip" data-filter="conflict"><i class="fa-solid fa-shield-heart text-warning"></i> Conflict Areas</button>
+              <button class="map-filter-chip" data-filter="food"><i class="fa-solid fa-wheat-awn text-success"></i> Food Crises</button>
+            </div>
+          </div>
+
+          <!-- Leaflet Map Container -->
+          <div id="disasterImpactMap"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ACTIVE EMERGENCY APPEALS (6 Expanded Cards — Strict Center Alignment) -->
+    <section class="py-5 bg-white text-center" id="emergency-appeals">
+      <div class="container-fluid px-lg-5">
+        
+        <div class="max-w-700 mx-auto text-center mb-4">
+          <span class="section-tag"><i class="fa-solid fa-bolt"></i> Urgent Operations</span>
+          <h2 class="display-6 fw-bold mb-2 text-center">Active Emergency Appeals</h2>
+          <p class="text-secondary mb-3 text-center">High-priority humanitarian operations requiring rapid international solidarity and funding.</p>
+          <div class="d-flex justify-content-center">
+            <a href="#donate-gateway" class="btn-ifrc-red">
+              <i class="fa-solid fa-hand-holding-dollar"></i> Donate to Global Disaster Fund
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          
+          <!-- Appeal Card 1 (Image 4) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/2bMWk2xx75YMc1C8Y24-cLquza6BB-mON3nCXtCfd9CiMVI-qrzk63MeluTby2t4IG_efIEw11KenTiKH3taGHZo3lZQe55fT-7-i5VKZl1yaKPOo7SOqaFF6QTXQsMwLv6mRyQOGwKG_aBiRiyL-RUUR8LiuQr5mXNYZdy48iHwX-1nPh.jpg" alt="Middle East Emergency Relief">
+                <span class="appeal-type-badge"><i class="fa-solid fa-shield-heart text-warning"></i> Conflict & Health Crisis</span>
+                <span class="appeal-level-badge">CRITICAL LEVEL 3</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> Gaza & Middle East Crisis</div>
+                <h3 class="appeal-title">Emergency Trauma & Medical Lifeline Appeal</h3>
+                <p class="appeal-desc">
+                  Providing urgent medical consumables, paramedic ambulance dispatches, clean water desalination units, and winterization tents for 1.8 million displaced individuals.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$98.4M</strong></span>
+                    <span class="text-danger fw-bold">82% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill" style="width: 82%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $120,000,000</span>
+                    <span>14 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('Gaza & Middle East Emergency Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appeal Card 2 (Image 5) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/3mqebQyNlHnd2ZlUOA2aFcAK4CHgI7WoPfxms8oO6vyYtqQq0m-c_2xFMNmFFRjl1_FGWR5VPZIJaqMcjzp56ZWoEAnny-hB5GLAsq7RjF7e38OiXLn9NhGWYylHxXgtfpiRiV6X4iVwDPbKwLfJAQtBRlSLXVK5LFuN8nQ8flCM0lrFQu.jpg" alt="Horn of Africa Drought">
+                <span class="appeal-type-badge"><i class="fa-solid fa-wheat-awn text-warning"></i> Famine & Severe Drought</span>
+                <span class="appeal-level-badge">LEVEL 3 APPEAL</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> Kenya, Ethiopia & Somalia</div>
+                <h3 class="appeal-title">Horn of Africa Drought & Nutrition Emergency</h3>
+                <p class="appeal-desc">
+                  Responding to catastrophic failure of consecutive rainy seasons. Mobilizing mobile therapeutic feeding units, borehole water rehabilitation, and unconditional cash transfers.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$58.6M</strong></span>
+                    <span class="text-warning fw-bold">69% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill orange" style="width: 69%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $85,000,000</span>
+                    <span>28 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('Horn of Africa Food Insecurity Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appeal Card 3 (Image 8) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/7RAi6Rj8TcDIhk_0pp7G45Sw34wbQoX-DLvyV5v_EWhBURGKMy0k2E7PlgSTmySNjD9Cw8luJ9l_v4sbJtZaW1aoK4tSid4mNlAbMnK4VrRCEY833_kk2u0XmWDGACoa5oyb2cHTVjlev5wZT2nYskrx2uXX96j9R7CprH9j65K-DJ9ZGV.jpg" alt="Türkiye & Syria Recovery">
+                <span class="appeal-type-badge"><i class="fa-solid fa-house-crack text-danger"></i> Earthquake Recovery</span>
+                <span class="appeal-level-badge">PHASE 2 RECOVERY</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> Türkiye & Northern Syria</div>
+                <h3 class="appeal-title">Post-Earthquake Reconstruction & Trauma Care</h3>
+                <p class="appeal-desc">
+                  Supporting sustainable container shelters, water & sanitation infrastructure reconstruction, and long-term psychosocial counseling for surviving families and orphaned children.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$114.0M</strong></span>
+                    <span class="text-success fw-bold">76% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill" style="width: 76%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $150,000,000</span>
+                    <span>45 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('Türkiye & Syria Recovery Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appeal Card 4 (Image 3) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/0hYxr6u2ybbWeftInSlw_xK6tAlqMwUQOR3qEo_-gHutLZ0Ebr9UOuA0sx7RaT5R0CegwUwA8IWoAB0xoxKGGbnAQsuD3o8pN4zw_FG2LRxEDOxO5vcQ58nf7YwabhtMjLgek3qdv71lin6rgyDd2lazDTm4tJky49ZyuGhOmL74pXPQ7l.jpg" alt="Pacific Island Super Typhoon Appeal">
+                <span class="appeal-type-badge"><i class="fa-solid fa-wind text-primary"></i> Super Typhoon Surge</span>
+                <span class="appeal-level-badge">RAPID DREF</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> Philippines & Pacific Islands</div>
+                <h3 class="appeal-title">Typhoon Coastal Relief & Resilient Rebuilding</h3>
+                <p class="appeal-desc">
+                  Dispatching heavy duty tarpaulins, solar desalination kits, emergency hygiene dignity packs, and cash vouchers for coastal fishing communities cut off by storm surges.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$22.8M</strong></span>
+                    <span class="text-success fw-bold">71% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill" style="width: 71%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $32,000,000</span>
+                    <span>19 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('Philippines & Pacific Typhoon Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appeal Card 5 (Image 13) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/L5TqsA7tdyzaoGWSTqySNLH7wn8hWiLOoAYhzyF0_EfZU5pWy80nE38cKqcvbYvyLcNYPISOiyeDxAZ2DW0oDaMVc81Sy-TZxITo-9A_DFWC9fMsrorFvDHJSFGFjpqZ2YBChTeE5rJQA6PacLQ8h_csxskpPavsf7EltJIDInPaw7t0vX.jpg" alt="South Sudan Flood Crisis">
+                <span class="appeal-type-badge"><i class="fa-solid fa-water text-primary"></i> Inundation & Displacement</span>
+                <span class="appeal-level-badge">EMERGENCY APPEAL</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> South Sudan (Bentiu / Unity)</div>
+                <h3 class="appeal-title">South Sudan Monsoon Flooding & Cholera Shield</h3>
+                <p class="appeal-desc">
+                  Building flood barrier dykes, administering oral cholera vaccines, and distributing high-protein rations for 400,000 families displaced by historic standing floodwaters.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$10.1M</strong></span>
+                    <span class="text-danger fw-bold">70% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill" style="width: 70%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $14,500,000</span>
+                    <span>34 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('South Sudan Flood Emergency Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appeal Card 6 (Image 17) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="appeal-card">
+              <div class="appeal-img-box">
+                <img src="image/Nv5XMoCZmiK-8MxrLDRcCh_TSa-h8ssbeF2rInbvePr0BTbEZzh3BDPim4lVl6Axc8mXiOajucoHp60us3NXSlOEwjBobVGZffJGHh2fXBwPoyf_lBtRou3aHYRWjM9Jzy6bg-elqBzr8eqUAOL4bjXmm8JPJ2FmPD2VHOuCa3tFMYL7Io.jpg" alt="South Asia Cyclone Operations">
+                <span class="appeal-type-badge"><i class="fa-solid fa-cloud-showers-heavy text-info"></i> Monsoon Deluge</span>
+                <span class="appeal-level-badge">ACTIVE RESPONSE</span>
+              </div>
+              <div class="appeal-card-body">
+                <div class="appeal-location"><i class="fa-solid fa-location-dot text-danger"></i> Bangladesh & Eastern India</div>
+                <h3 class="appeal-title">South Asia River Basin Monsoon Emergency</h3>
+                <p class="appeal-desc">
+                  Mobilizing search and rescue boats, community water filtration trailers, dry food hampers, and post-flood vector control to protect 850,000 vulnerable riverine residents.
+                </p>
+                <div class="appeal-progress-box">
+                  <div class="progress-stats-row">
+                    <span class="text-muted">Raised: <strong class="text-dark">$14.0M</strong></span>
+                    <span class="text-success fw-bold">78% Funded</span>
+                  </div>
+                  <div class="appeal-progress-bar">
+                    <div class="appeal-progress-fill" style="width: 78%;"></div>
+                  </div>
+                  <div class="progress-stats-row text-muted" style="font-size:0.75rem;">
+                    <span>Goal: $18,000,000</span>
+                    <span>12 Days Remaining</span>
+                  </div>
+                </div>
+                <button class="btn-ifrc-red w-100 justify-content-center mx-auto" onclick="triggerDonateModal('Bangladesh & South Asia Flood Appeal')">
+                  <i class="fa-solid fa-heart"></i> Donate to This Appeal
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RELIEF PROGRAMS & OPERATIONAL DOMAINS (Strict Center Alignment) -->
+    <section class="py-5 text-center" id="relief-programs" style="background-color: #F8FAFC;">
+      <div class="container-fluid px-lg-5">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="section-tag"><i class="fa-solid fa-hand-holding-hand"></i> Core Capabilities</span>
+          <h2 class="display-6 fw-bold text-center">Humanitarian Relief Programs</h2>
+          <p class="text-secondary text-center">Engineered for immediate disaster intervention, rapid logistical airlift, and long-term community resilience.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          
+          <!-- Program 1 (Image 6) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/5eT9LLDRwpuRShNBYOt7wcWukEjDi585JRulYK9ILG05oJ8Z-HvEo9vmEMUFBLJZzBHjwpA5vXtbkc9pXw85eZWDwHZR7-tm3jC_00TdSNkLQ0a1E7iJ9sKxolIP1Y1A0RH3qkhuKrPVcJAf7_4cL-p8FJOIhDQA_wsHnknDQis1lv (1).jpg" alt="Health & Trauma Medical Response">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle red mx-auto">
+                  <i class="fa-solid fa-truck-medical"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">Emergency Health & Trauma Units</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Deployable surgical field hospitals, trauma triage backpacks, mobile maternal clinics, and mass outbreak vaccination teams ready within 24 hours.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-danger me-1"></i>WHO EMT Class 2 certified</li>
+                  <li><i class="fa-solid fa-check text-danger me-1"></i>Emergency blood delivery & cold chain</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 2 (Image 7) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/5eT9LLDRwpuRShNBYOt7wcWukEjDi585JRulYK9ILG05oJ8Z-HvEo9vmEMUFBLJZzBHjwpA5vXtbkc9pXw85eZWDwHZR7-tm3jC_00TdSNkLQ0a1E7iJ9sKxolIP1Y1A0RH3qkhuKrPVcJAf7_4cL-p8FJOIhDQA_wsHnknDQis1lvUazB.jpg" alt="WASH clean water operations">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle blue mx-auto">
+                  <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">WASH: Water & Hygiene</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Rapid purification units delivering up to 600,000 liters of safe drinking water per day, flood latrines, and cholera containment protocols.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-primary me-1"></i>Solar high-volume desalinators</li>
+                  <li><i class="fa-solid fa-check text-primary me-1"></i>Dignity & hygiene kit distribution</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 3 (Image 10) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/IMiMe5Ao3B-KOW_rJH7ASPoN0bAmY_CnGgSR46xGJHNB1bYYFIIYvB6oTXhIQlMPP5tQaAutbsL7xHrh57HEckQaEnmuV4ZQaIwa9U_YdlitXsQF6OEvDp9IJZn76QUYK0Hg4Jyb6AOClxcR57A0F4uwlfnXPhZHDvQFAGBfEJlnf5igKA.jpg" alt="Shelter and non food items relief">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle orange mx-auto">
+                  <i class="fa-solid fa-tent"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">Emergency Shelter & NFIs</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Pre-positioned heavy duty tarpaulins, winterized all-weather family tents, thermal blankets, solar lanterns, and cooking sets for displaced populations.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-warning me-1"></i>Rapid kit airlift via strategic hubs</li>
+                  <li><i class="fa-solid fa-check text-warning me-1"></i>Emergency transition housing solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 4 (Image 12) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/KA8cUdPCnPjEHsmpWUV98PEf1MZ6NElpItrvs_rPIuLGeCBmQ78JmWxX5aq4ubVx_em31cLnAu-JB4BfGyA5IcQ0s4_7hVjsoD7mgksZJyW5MPqw5iI7oZ46x9w9R9ng3y3goAEwtOlB1BgE97YkAQ_xuEX7fft828TJm0tVhrdaPZHdgG.jpg" alt="Food security and nutrition aid">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle green mx-auto">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">Food Security & Cash Assistance</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Combating acute hunger with ready-to-use therapeutic food (RUTF), biometric cash distribution systems, and local market revival programs.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-success me-1"></i>Dignity-first digital cash vouchers</li>
+                  <li><i class="fa-solid fa-check text-success me-1"></i>Severely malnourished infant therapy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 5 (Image 15) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/MerCWpsH9cTU4_nroOIkyuM93wO9NrQm15vd4McThYf6JaTPiDhFuC1umy1hHE7BKhd6FQ1l-ye08BL9eioE6o9G0GFRWmZIwXj6ozVprRtNs0-FEOuIxj2pGCA_5GwBciWeHYqz3rMWQLs1Fip8xYUZxoCNOFJZfKA0BHbyCwQFb-yRVK.jpg" alt="Disaster communications and drone mapping">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle red mx-auto">
+                  <i class="fa-solid fa-satellite-dish"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">Emergency Telecommunications</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Deploying portable satellite uplinks, mesh radio networks, and disaster connectivity pods so responders and separated families can reconnect.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-danger me-1"></i>Restoring Family Links (RFL) network</li>
+                  <li><i class="fa-solid fa-check text-danger me-1"></i>Field drone mapping for search & rescue</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 6 (Image 18) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="program-feature-card">
+              <div class="program-img-box">
+                <img src="image/OBlPzfUrd_kURx-chSGpHiAGVa4zj46ROBjMHFEriJGIfcb4Qmhhpc_Z5SRXJLyVy8yxfQOFPdxTGPTUDUKSPF1Pg7DCK9T1R3RtM-lZWrk0O2FBB92q5r7beLZaDPZbZ7Xtv2r_73qtv7IkAoi8VhsgTDZk1v2rDfq_mbqo2duM0H (1).jpg" alt="Child protection and community care">
+              </div>
+              <div class="program-card-body">
+                <div class="program-icon-circle blue mx-auto">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h4 class="fw-bold mb-2 text-center">Protection, Gender & Inclusion</h4>
+                <p class="text-secondary mb-3 text-center">
+                  Safeguarding vulnerable children, women, elderly, and persons with disabilities in disaster zones against exploitation and trauma.
+                </p>
+                <ul class="list-unstyled text-muted small mb-0 mt-auto text-center">
+                  <li class="mb-1"><i class="fa-solid fa-check text-primary me-1"></i>Child-friendly safe spaces in camps</li>
+                  <li><i class="fa-solid fa-check text-primary me-1"></i>Community psychosocial first aid</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PHOTOJOURNALISM & FIELD OPERATIONS GALLERY (Centered) -->
+    <section class="py-5 bg-white text-center" id="photojournalism-gallery">
+      <div class="container-fluid px-lg-5">
+        <div class="max-w-700 mx-auto text-center mb-4">
+          <span class="section-tag"><i class="fa-solid fa-camera-retro"></i> Visual Evidence</span>
+          <h2 class="display-6 fw-bold mb-2 text-center">Humanitarian Field Photojournalism</h2>
+          <p class="text-secondary mb-3 text-center">Unfiltered visual dispatches capturing the courage of volunteers and the resilience of crisis-affected communities.</p>
+          <div class="d-flex justify-content-center">
+            <span class="badge bg-dark p-2"><i class="fa-solid fa-images me-1"></i> 31 Verified Field Assets</span>
+          </div>
+        </div>
+
+        <div class="row g-3 justify-content-center">
+          <!-- Gallery Item 1 (Image 14) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="50">
+            <div class="gallery-item">
+              <img src="image/LFsCk7mizrSTp8JODwwCkrBMpTa6vgBHodg-Ymij9F8teVWkv2DnEMglCnTFBEc0b6pfheogMqKTc5WzaeWh8LXuSf0qRVDruUJWx2uunvHIuJSp-eRUG5NuYSRm4frKWGw7dKF1Dopg-_9u-94WFJ2DDbXLg3J_mQJFq9W9Q7X8l4eXA2ea.jpg" alt="Field Search & Rescue">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Search & Rescue</span>
+                <span class="gallery-overlay-title">Highland Mudslide Relief</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 (Image 19) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="gallery-item">
+              <img src="image/OBlPzfUrd_kURx-chSGpHiAGVa4zj46ROBjMHFEriJGIfcb4Qmhhpc_Z5SRXJLyVy8yxfQOFPdxTGPTUDUKSPF1Pg7DCK9T1R3RtM-lZWrk0O2FBB92q5r7beLZaDPZbZ7Xtv2r_73qtv7IkAoi8VhsgTDZk1v2rDfq_mbqo2duM0HZd3u.jpg" alt="Child Health Support">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Pediatrics</span>
+                <span class="gallery-overlay-title">Infant Nutrition Check</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 (Image 25) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
+            <div class="gallery-item">
+              <img src="image/aX-CD5sSOwjY39o9jc2tz-bb5ic5BZPMgLSfl7uSMvT-ePco8eehxQNMo_sM1SChZYMxc6OKV99oJ3WvNJotRYNMxgjGzuunN6ziQPzeRhsl-j1eF4il6X6_6Oqd_6iL3rTMPsnU_ylTQn6JkChbPdanotY3MnwQFi41jvL4oa2LtKXoh_.jpg" alt="Emergency Supply Distribution">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Logistics</span>
+                <span class="gallery-overlay-title">Ration Offloading</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 (Image 26) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+            <div class="gallery-item">
+              <img src="image/bOUNVOEww0W_HG5jf2SkCzt01vP9QOGGyubpvOdZSNkzcJsKbayNIqPdW5c4ahkdcKdqug8RaqDIjRxT2JgAzn5BgLc6mVnHtUTqv3iHpzH9VGYygNF7PsI4vSrAyKTdkxB5wR1lSYD94Javi3DPykG9F8O7Q95kmkzEaLv9a5uz90mnYO.jpg" alt="Trauma Triage Medic">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Emergency Care</span>
+                <span class="gallery-overlay-title">Paramedic Triage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 (Image 27) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
+            <div class="gallery-item">
+              <img src="image/fNweHGwmyzIDc1aSkCRSExpKhMLXBmcVDXYrUq9Wpzu834_eFtv2320VR5WpRNMj9wxmFoOOPbquTOUboZDDMgtWVv1a4sGZsuaz7jc600jGDYuzSY-7V-6WlVxW2kSnqwVMgHs2pXaoQPHOKMdZA-x0QnZuQJEefKICWQcsyJc5xWn9Bp.jpg" alt="Shelter Construction">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Shelter</span>
+                <span class="gallery-overlay-title">Camp Pod Setup</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 (Image 30) -->
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+            <div class="gallery-item">
+              <img src="image/vSPbM94DVEEQuEMeREdc0k5CsOBDefcE92MUC0FEnaA-SxHQme3TRFVqNZMDNF_legJ_8rQm09sbwl_nvW7CiHnqgxxDIRG1Hzag0ke3UqysRe4F-o0pvZ1wn-CU5bdvfmBSsdYWykP96O2yIl0Mo1tESVYlrsB7NYbeDlWMuGnVGATGs.jpg" alt="Community Rebuilding">
+              <div class="gallery-overlay">
+                <span class="gallery-overlay-tag">Recovery</span>
+                <span class="gallery-overlay-title">Community Resilience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. HUMANITARIAN ANALYTICS & TELEMETRY HUB (Centered) -->
+    <section class="analytics-section text-center" id="operations-analytics">
+      <div class="container-fluid px-lg-5">
+        <div class="max-w-700 mx-auto text-center mb-5">
+          <span class="hero-badge mb-2"><i class="fa-solid fa-chart-line"></i> DATA & TRANSPARENCY</span>
+          <h2 class="display-6 fw-bold text-white text-center">Operations Analytics & Fund Deployment</h2>
+          <p class="text-white-50 mb-3 text-center">Audited telemetry on humanitarian financing, resource allocations, and international response velocities.</p>
+          <div class="d-flex justify-content-center">
+            <div class="d-inline-flex align-items-center gap-2 bg-dark p-2 px-3 rounded-3 border border-secondary border-opacity-25">
+              <i class="fa-solid fa-file-pdf text-danger"></i>
+              <span class="small text-white">Download 2026 Global Disaster Report (PDF)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Chart 1: Funding Breakdown -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="chart-card text-center">
+              <div class="chart-card-title text-center"><i class="fa-solid fa-chart-pie text-danger me-2"></i> Global Relief Capital Allocation</div>
+              <div class="chart-card-sub text-center">Distribution across emergency rapid grants, long-term appeals, and preparedness</div>
+              <div class="chart-wrapper">
+                <canvas id="fundingDistributionChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 2: Deployment Velocity -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="chart-card text-center">
+              <div class="chart-card-title text-center"><i class="fa-solid fa-stopwatch text-warning me-2"></i> Emergency Deployment Velocity</div>
+              <div class="chart-card-sub text-center">Average elapsed hours from initial crisis trigger to on-site boots arrival</div>
+              <div class="chart-wrapper">
+                <canvas id="deploymentSpeedChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. STORIES FROM THE FRONTLINE (Swiper.js — Strict Center Alignment) -->
+    <section class="py-5 bg-white text-center" id="stories-news">
+      <div class="container-fluid px-lg-5">
+        <div class="max-w-700 mx-auto text-center mb-4">
+          <span class="section-tag"><i class="fa-solid fa-microphone-lines"></i> Frontline Voices</span>
+          <h2 class="display-6 fw-bold mb-2 text-center">Stories From the Field & Situation Reports</h2>
+          <p class="text-secondary mb-3 text-center">Eyewitness dispatch notes from first responders, volunteer medics, and impacted communities.</p>
+          
+          <!-- Navigation Arrows (Centered) -->
+          <div class="d-flex justify-content-center gap-3 mt-2">
+            <div class="swiper-button-prev-custom"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="swiper-button-next-custom"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <div class="swiper storiesSwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Slide 1 (Image 9) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/G3v7y4_ncGR5tTehulQFaXvIGgvh29id0dAw_2e3_YUsQquYhJukhn1FVemyvka8b5up2kt_IFZdEiekZNg6dz2D7SQGq3z14gG3nTK5Rfq1E9GC4OEeWctT0NDtDcVWpH-3cYKH-9U9CDT_fmg1FZW5F-4QlBMcMPhIx-PIHnlMJDr9dB.jpg" alt="Medical Field Response">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> Today, 08:30 UTC</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-danger small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> FIELD REPORT</div>
+                  <h4 class="story-title text-center">Delivering Trauma Kits Amid Mountain Flash Floods</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    "When roads washed out, our volunteers trekked 14 miles carrying solar coolers and insulin supplies on foot..."
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 (Image 11) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/IxF151hBOSat_RiS8kOCzJ1ycCxpPkEJOFpsy7lXSMfXWpW1W_dmT-FaQpMPD3VJkgy7AX76S3rY5J79V64rQpPo2QMczTurMLSvy6W_2g-qhVtpeWU_euW9jMg4eJobH6-0d43H8oPQPMB9qK0tTqDoRLabIhlUyBseCeT28CgaXTg8KB.jpg" alt="Water Purification Deployment">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> Yesterday</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-primary small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> WASH OPERATIONS</div>
+                  <h4 class="story-title text-center">How 2 Solar Water Plants Saved 45,000 from Cholera</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Clean, safe drinking water is the single most effective barrier to prevent secondary epidemics following tropical storms.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 (Image 16) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/NErDJAR5jzfurUQeZPgZAgE0_23g5ngJAoa8wnFgT1E2fe-YvKXlxl4n2QAEzPD5_oUaJzNRV3CpIFuCc_AQaTMBNpZMBdWxwFMt5rDXpgUstDZBkWV-QMKMi3wDg67WLeOy67BLXJAqKwCXYo_hdQsftkCLxpM31qHwkUp-vVaQ4INmV9.jpg" alt="Shelter Pods Distribution">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 2 Days Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-warning small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> SHELTER PODS</div>
+                  <h4 class="story-title text-center">Rebuilding Dignity: 1,200 All-Weather Shelter Pods</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Inside the joint relief base where rapid structural pods provide safety for mothers and newborn infants.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 (Image 20) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/S993OoACQCJge_6UkDXwzHX_dmpoNuqiAEu0SgWJtXz0BRgfFBWdxlsq3VT1gZWV6GC27P_ResdFrfE7EDEG4lAdpcUtL1smVN9EaH_YZdMlpVBczLINEVUX8vU2bHUqrF10ne5UE4kjn66XnJnwXyvMDOsdbZYnXHU1hd7-Oj3gp7e14v.jpg" alt="Food Delivery Convoy">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 3 Days Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-success small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> FOOD CONVOY</div>
+                  <h4 class="story-title text-center">Reaching Desert Communities with High-Energy RUTF</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Overcoming rugged terrain to distribute 50 metric tons of specialized pediatric nutrition in drought zones.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 (Image 21) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/TzKrlhfOSAVddddfGdjwA_m1gCI_djSYoRYr2YXizC4pe2fUjDzVpJnvMo2xNEgx2x1c5nOLCMvFXH1KMy7rBscfP5Kzdl4_pkUAimyV_xGL15R2HJbFf1poLfNlgim5Ufe_ZgosnjPh45Nwg0TX6YLsxsE1WdZE0w4mIWEIpvST0rFyQl.jpg" alt="Emergency Airlift Hub">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 4 Days Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-danger small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> AIRLIFT LOGISTICS</div>
+                  <h4 class="story-title text-center">Behind the Scenes at Dubai Humanitarian Logistics Hub</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    How high-speed automated cargo pallets are packed and loaded onto charter cargo jets in less than 90 minutes.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 (Image 22) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/WlAtKQKaAHYeakGHed0Gdt02Dna8Hn0xHlIVDKedaso8r7i6fZOD5PaVp1Drz5EfwgW4WwtJzr74CsjBcdjndUBCYrrR5ECuqqSlCbi5RwlnlPLlCzJtOUyVhlhqwZ6BT-NK35nkLK39rpIzibLUbbSf1a6CZnGKd_0wJjKXAFeNZ3OYdP.jpg" alt="Mobile Clinic Volunteer">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 5 Days Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-primary small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> FIRST RESPONDERS</div>
+                  <h4 class="story-title text-center">Volunteer Spotlight: 72h on the Emergency Ambulance Line</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Paramedics recount the harrowing rescue missions following an unexpected overnight river breach.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 7 (Image 23) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/YOXzs2Eg5unp-w5aHMTUEgF3BKfA3719UT2JJtSxRyA8FjNh0QIaTngDeND3o1CqPpk9BCkmVCz58vfMQKm6qzr2UrC74PiyytXHS-8c8vzJngrsFMh5SPIHU4bZEJRMkVw9Ddp863Sg5_WK1M97TrYCiyLHZq_9n1lYnCKU4xDOMC29qE.jpg" alt="Safe Space for Children">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 6 Days Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-warning small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> PROTECTION</div>
+                  <h4 class="story-title text-center">Creating Safe Havens: Child Psychosocial Healing Spaces</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Providing structured play, trauma decompression, and tracing separated family members in transit camps.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 8 (Image 24) -->
+            <div class="swiper-slide">
+              <div class="story-card text-center">
+                <div class="story-img-wrap">
+                  <img src="image/YohvI8uoQELud0PPhVrgRGLm1LKToTBgaClrJZHoLEBToBz_nyATNx6RPcWPwoBAm1JTtH9P7Oj2Za9m5WtWITxf-sOT3tMVYW27XKodtx5fsoWuAjwAz3NlLxc2qgxCh0nR1fm6qMRocMAmv-ScF_gY2m2XeVI8cs9QTumTWxnvoWNGHV.jpg" alt="Winter Aid Distribution">
+                  <span class="story-date-badge"><i class="fa-regular fa-clock me-1"></i> 1 Week Ago</span>
+                </div>
+                <div class="story-body">
+                  <div class="text-info small fw-bold mb-1 text-center"><i class="fa-solid fa-tag"></i> WINTER RELIEF</div>
+                  <h4 class="story-title text-center">Delivering Thermal Blankets Ahead of Sub-Zero Frost</h4>
+                  <p class="small text-secondary mb-3 text-center">
+                    Emergency distribution of thermal kits and insulated floor mats to prevent severe hypothermia in tent camps.
+                  </p>
+                  <a href="#top" class="text-dark fw-bold small mt-auto text-center justify-content-center">Read Full Dispatch <i class="fa-solid fa-arrow-right ms-1 text-danger"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination mt-4 position-relative"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. INTERACTIVE DONATION & EMERGENCY APPEAL GATEWAY (Strict Center Alignment) -->
+    <section class="py-5 text-center" id="donate-gateway" style="background: linear-gradient(180deg, #0B192C 0%, #152A3F 100%); color: #FFFFFF;">
+      <div class="container-fluid px-lg-5">
+        
+        <div class="max-w-700 mx-auto text-center mb-5" data-aos="fade-up">
+          <span class="hero-badge mb-3"><i class="fa-solid fa-hand-holding-dollar"></i> EMERGENCY DIRECT GIVING</span>
+          <h2 class="display-5 fw-bold text-white mb-3 text-center">Your Support Saves Lives When Disaster Strikes</h2>
+          <p class="text-light opacity-75 mb-4 leading-relaxed text-center">
+            Every dollar pledged is deployed immediately to frontline relief efforts. Our audited allocation model guarantees that over <strong>91%</strong> of all funding goes directly to field operations and disaster victims.
+          </p>
+
+          <div class="d-flex flex-column align-items-center gap-3 mb-4 max-w-700 mx-auto">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <div class="brand-symbol mx-auto" style="width: 36px; height: 36px; font-size: 1rem; background: rgba(224, 0, 0, 0.2); border: 1px solid var(--ifrc-red);">
+                <i class="fa-solid fa-check text-danger"></i>
+              </div>
+              <div class="text-start">
+                <h6 class="mb-0 fw-bold">100% Tax Deductible</h6>
+                <small class="text-white-50">Official 501(c)(3) & charity accreditation receipt included.</small>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <div class="brand-symbol mx-auto" style="width: 36px; height: 36px; font-size: 1rem; background: rgba(0, 135, 90, 0.2); border: 1px solid var(--alert-green);">
+                <i class="fa-solid fa-lock text-success"></i>
+              </div>
+              <div class="text-start">
+                <h6 class="mb-0 fw-bold">Bank-Grade 256-Bit SSL Security</h6>
+                <small class="text-white-50">Encrypted tokenization with VISA, Mastercard, Amex, PayPal & SEPA.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Donation Engine Box (Centered) -->
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-8 col-xl-6">
+            <div class="donation-portal-box text-center mx-auto">
+              <h3 class="fw-bold text-dark mb-1 text-center">Make an Emergency Contribution</h3>
+              <p class="text-muted small mb-4 text-center">Select an amount or enter a custom sum to support active appeals.</p>
+
+              <!-- Frequency Selector -->
+              <div class="donation-type-toggle mx-auto">
+                <button class="donation-toggle-btn active" data-frequency="one-time">One-Time Gift</button>
+                <button class="donation-toggle-btn" data-frequency="monthly"><i class="fa-solid fa-arrows-rotate text-danger me-1"></i> Monthly Lifeline</button>
+              </div>
+
+              <!-- Appeal Target Selector -->
+              <div class="mb-3 text-center">
+                <label class="form-label text-dark fw-bold small text-center">Designate Emergency Fund:</label>
+                <select class="form-select fw-semibold text-center" id="donationAppealSelect">
+                  <option value="global" selected>Global Emergency Disaster Relief Fund (Highest Priority)</option>
+                  <option value="gaza">Gaza & Middle East Emergency Trauma Appeal</option>
+                  <option value="horn-africa">Horn of Africa Complex Hunger & Drought Crisis</option>
+                  <option value="turkiye-syria">Türkiye & Syria Earthquake Long-Term Reconstruction</option>
+                  <option value="monsoon">South Asia Monsoon Flash Flood & Cyclone Relief</option>
+                  <option value="pacific">Philippines & Pacific Island Typhoon Recovery</option>
+                </select>
+              </div>
+
+              <!-- Preset Amount Selector -->
+              <label class="form-label text-dark fw-bold small text-center">Choose Contribution Amount (USD):</label>
+              <div class="amount-grid mx-auto">
+                <button class="amount-btn" data-amount="25">$25</button>
+                <button class="amount-btn" data-amount="50">$50</button>
+                <button class="amount-btn active" data-amount="100">$100</button>
+                <button class="amount-btn" data-amount="250">$250</button>
+                <button class="amount-btn" data-amount="500">$500</button>
+                <button class="amount-btn" data-amount="1000">$1,000</button>
+              </div>
+
+              <!-- Custom Amount -->
+              <div class="input-group mb-4 mx-auto" style="max-width: 360px;">
+                <span class="input-group-text fw-bold bg-light">$</span>
+                <input type="number" class="form-control custom-amount-input text-center" id="customDonationInput" placeholder="Enter custom amount (USD)">
+              </div>
+
+              <!-- Real-time Impact Simulator -->
+              <div class="impact-preview-banner text-center justify-content-center mx-auto" id="donationImpactPreview">
+                <i class="fa-solid fa-faucet-drip text-primary"></i>
+                <span>Funds high-capacity emergency water treatment filtration units delivering 10,000L clean drinking water.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button class="btn btn-ifrc-red btn-lg w-100 justify-content-center py-3 mx-auto" id="btnSubmitDonation">
+                <i class="fa-solid fa-shield-heart me-1"></i> Complete Emergency Donation
+              </button>
+
+              <div class="text-center mt-3 text-muted small">
+                <i class="fa-solid fa-heart text-danger"></i> Thank you for standing with families in disaster zones.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. EMERGENCY CONTACT & RAPID DISPATCH DIRECTORY (Strict Center Alignment) -->
+    <section class="py-5 bg-white text-center" id="contact-operations">
+      <div class="container-fluid px-lg-5">
+        
+        <div class="max-w-700 mx-auto text-center mb-5" data-aos="fade-up">
+          <span class="section-tag"><i class="fa-solid fa-headset"></i> Operations Dispatch</span>
+          <h2 class="display-6 fw-bold mb-3 text-center">24/7 International Duty Officer & Operations Desk</h2>
+          <p class="text-secondary mb-4 text-center">
+            For rapid operational queries, government liaison, media broadcast access, and deployment logistics coordination.
+          </p>
+        </div>
+
+        <div class="row justify-content-center gy-4 mb-5">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="p-4 bg-light rounded-3 border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="brand-symbol mx-auto mb-3" style="width: 44px; height: 44px; font-size: 1.2rem;">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-center">Emergency Duty Hotline</h6>
+              <p class="small text-muted mb-2 text-center">Geneva Operations Command (24/7)</p>
+              <a href="tel:+41227304222" class="fw-bold text-danger fs-6">+41 22 730 4222</a>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 bg-light rounded-3 border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="brand-symbol mx-auto mb-3" style="width: 44px; height: 44px; font-size: 1.2rem; background: var(--navy-dark);">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-center">Disaster Telemetry Desk</h6>
+              <p class="small text-muted mb-2 text-center">Official SitRep Inquiries</p>
+              <a href="mailto:operations@ifrc-go.org" class="fw-bold text-primary fs-6">operations@ifrc-go.org</a>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="p-4 bg-light rounded-3 border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="brand-symbol mx-auto mb-3" style="width: 44px; height: 44px; font-size: 1.2rem; background: var(--navy-light);">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-center">Global Headquarters</h6>
+              <p class="small text-muted mb-0 text-center">Chemin des Crêts 17, 1209 Geneva, Switzerland</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form (Centered) -->
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-8">
+            <div class="p-4 p-md-5 bg-light rounded-4 border shadow-sm text-center mx-auto">
+              <h4 class="fw-bold text-dark mb-1 text-center">Send a Direct Message to Operations</h4>
+              <p class="text-muted small mb-4 text-center">Field inquiries, media credentials, partnership proposals, or volunteering questions.</p>
+
+              <form onsubmit="event.preventDefault(); alert('Message successfully transmitted to Operations Command. An officer will respond shortly.');">
+                <div class="row g-3 justify-content-center">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-dark text-center d-block">Full Name *</label>
+                    <input type="text" class="form-control text-center" placeholder="Dr. Sarah Jenkins" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-dark text-center d-block">Email Address *</label>
+                    <input type="email" class="form-control text-center" placeholder="s.jenkins@organization.org" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-dark text-center d-block">Organization / Agency</label>
+                    <input type="text" class="form-control text-center" placeholder="e.g. UN OCHA / Media / Hospital">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-dark text-center d-block">Inquiry Department *</label>
+                    <select class="form-select fw-semibold text-center" required>
+                      <option value="emergency">Emergency Response & Airlift</option>
+                      <option value="media">Press & Media Inquiries</option>
+                      <option value="dref">DREF Funding & Grants</option>
+                      <option value="volunteer">International Volunteer Registry</option>
+                      <option value="other">General Operational Query</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small fw-bold text-dark text-center d-block">Urgent Message or Situation Details *</label>
+                    <textarea class="form-control text-center" rows="4" placeholder="Detail the operational inquiry, emergency coordinates, or support request..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-ifrc-navy w-100 py-3 justify-content-center mx-auto">
+                      <i class="fa-solid fa-paper-plane me-2"></i> Transmit Urgent Inquiry
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. FOOTER (Strict Center Alignment) -->
+  <footer class="ifrc-footer text-center">
+    <div class="container-fluid px-lg-5">
+      <div class="row gy-4 justify-content-center text-center">
+        
+        <div class="col-lg-4 d-flex flex-column align-items-center text-center">
+          <div class="footer-brand-container mb-3">
+            <div class="footer-brand-crest">
+              <i class="fa-solid fa-square-plus"></i>
+            </div>
+            <div class="d-flex flex-column text-start">
+              <span class="footer-brand-title">IFRC <span class="text-danger ms-1">RELIEF</span></span>
+              <span class="footer-brand-tag">Global Emergency Command</span>
+            </div>
+          </div>
+          <p class="small text-secondary mb-3 leading-relaxed text-center" style="max-width: 360px;">
+            The International Federation of Red Cross and Red Crescent Societies (IFRC) is the world's largest humanitarian network, reaching 160 million people each year through 191 member National Societies.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+          <div class="footer-col-title text-center">Operations</div>
+          <ul class="footer-links text-center">
+            <li><a href="#disaster-map-section">Live Operations Map</a></li>
+            <li><a href="#emergency-appeals">Active Appeals</a></li>
+            <li><a href="#relief-programs">DREF Allocations</a></li>
+            <li><a href="#photojournalism-gallery">Field Photo Gallery</a></li>
+            <li><a href="#operations-analytics">Data & Analytics</a></li>
+            <li><a href="#stories-news">SitReps & Field News</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+          <div class="footer-col-title text-center">About & Principles</div>
+          <ul class="footer-links text-center">
+            <li><a href="#about-us">7 Principles</a></li>
+            <li><a href="#about-us">191 National Societies</a></li>
+            <li><a href="#about-us">Governance & Audits</a></li>
+            <li><a href="#top">Leadership & Council</a></li>
+            <li><a href="#contact-operations">Careers & Deployment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+          <div class="footer-col-title text-center">Donors & Partners</div>
+          <ul class="footer-links text-center">
+            <li><a href="#donate-gateway">Make a Donation</a></li>
+            <li><a href="#donate-gateway">Monthly Lifeline</a></li>
+            <li><a href="#top">Corporate Partnerships</a></li>
+            <li><a href="#top">UN Strategic Trust</a></li>
+            <li><a href="#top">Tax Deductibility FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+          <div class="footer-col-title text-center">Emergency Contact</div>
+          <ul class="footer-links text-center">
+            <li><a href="tel:+41227304222">+41 22 730 4222</a></li>
+            <li><a href="mailto:operations@ifrc-go.org">operations@ifrc-go.org</a></li>
+            <li><a href="#contact-operations">Geneva Operations Room</a></li>
+            <li><a href="#top">Media Relations Desk</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap align-items-center justify-content-center gap-3 text-muted text-center">
+        <div>
+          &copy; 2026 International Federation of Red Cross and Red Crescent Societies (IFRC). All rights reserved.
+        </div>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#top" class="text-muted">Privacy Policy</a>
+          <a href="#top" class="text-muted">Terms of Use</a>
+          <a href="#top" class="text-muted">Fraud & Compliance Reporting</a>
+          <a href="#top" class="text-muted">API Access</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: DYNAMIC EMERGENCY APPEAL DONATION MODAL (With Image 31 header banner) -->
+  <div class="modal fade" id="emergencyDonationModal" tabindex="-1" aria-labelledby="emergencyDonationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="position-relative" style="height: 120px; overflow: hidden; background: var(--navy-dark);">
+          <img src="image/yzqiaxVIay6QM34pduppIj4QyJLras8d4yZZ9K_3Xgz2Duh07dHxVARQtYIwrJhoycZ4T5BVHWtY91gejhg_unQMpgQjZ3ii-SXLyjKih07fThHjxGWkz-1td7OTyLm5g_VtpfB-zG31yUQktGXunstnMl0mnyeStmdJqMZszdlZNksRRc.jpg" alt="Donation header" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.75;">
+          <div class="position-absolute inset-0 bg-dark bg-opacity-50 p-3 d-flex align-items-end justify-content-between" style="top:0;left:0;right:0;bottom:0;">
+            <h5 class="modal-title font-sans fw-bold text-white mb-0" id="emergencyDonationModalLabel">
+              <i class="fa-solid fa-heart text-danger me-2"></i> Support Emergency Appeal
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <label class="form-label small fw-bold text-dark">Target Appeal / Operation:</label>
+            <input type="text" class="form-control fw-bold bg-light text-danger" id="modalTargetAppeal" readonly value="Global Disaster Relief Fund">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold text-dark">Donation Amount (USD):</label>
+            <div class="input-group">
+              <span class="input-group-text fw-bold">$</span>
+              <input type="number" class="form-control fw-bold fs-5" id="modalDonationAmount" value="100">
+            </div>
+          </div>
+          <div class="p-3 bg-light rounded-3 mb-3 border small text-muted">
+            <i class="fa-solid fa-shield-check text-success me-1"></i> Your gift will be dispatched immediately to support local trauma medics, clean water purification, and temporary shelter.
+          </div>
+          <button type="button" class="btn btn-ifrc-red w-100 py-2 fs-6 justify-content-center" onclick="executeModalDonation()">
+            <i class="fa-solid fa-lock me-1"></i> Confirm & Authorize Contribution
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CELEBRATORY DONATION SUCCESS MODAL -->
+  <div class="modal fade" id="donationSuccessModal" tabindex="-1" aria-labelledby="donationSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4">
+        <div class="my-3">
+          <div class="brand-symbol mx-auto" style="width:68px; height:68px; font-size:2rem; background: var(--alert-green);">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+        <h3 class="fw-bold text-dark">Thank You for Your Solidarity!</h3>
+        <p class="text-secondary small px-3" id="donationSuccessSummary">
+          Your emergency relief contribution has been received and routed directly to the field operations ledger.
+        </p>
+        <div class="my-3">
+          <button type="button" class="btn btn-ifrc-navy px-4" data-bs-dismiss="modal">Return to Operations Hub</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Party Scripts -->
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Leaflet 1.9.4 JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Chart.js 4.4.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Swiper 11 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Core App JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
