@@ -1651,15 +1651,14 @@ section {
 }
 
 /* ==========================================================================
-   Footer (Strict Center Alignment & Balanced Brand Identity)
+   Footer (High Contrast, Perfect Visual Alignment & Legibility)
    ========================================================================== */
 .ifrc-footer {
-  background: var(--navy-dark);
-  color: #B0C0D0;
+  background: #07111E;
+  color: #E2E8F0;
   padding: 70px 0 30px 0;
   border-top: 4px solid var(--ifrc-red);
-  font-size: 0.875rem;
-  text-align: center;
+  font-size: 0.9375rem;
   width: 100%;
 }
 
@@ -1667,43 +1666,52 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   text-align: left;
+  margin-bottom: 16px;
 }
 
 .footer-brand-crest {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, #FF1744 0%, #C20000 100%);
   color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
-  box-shadow: 0 4px 14px rgba(224, 0, 0, 0.4);
+  font-size: 1.4rem;
+  box-shadow: 0 4px 16px rgba(224, 0, 0, 0.45);
   flex-shrink: 0;
 }
 
 .footer-brand-title {
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.01em;
-  color: #FFFFFF;
+  color: var(--ifrc-red);
   line-height: 1.1;
-  display: flex;
-  align-items: center;
+  display: block;
 }
 
 .footer-brand-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #94A3B8;
-  letter-spacing: 0.5px;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  color: #CBD5E1;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  margin-top: 3px;
+  margin-top: 4px;
   display: block;
+}
+
+.footer-lead-text {
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto 16px auto;
+  text-align: center;
 }
 
 .footer-social-row {
@@ -1715,16 +1723,16 @@ section {
 }
 
 .footer-social-btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  color: #CBD5E1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   transition: all var(--transition-fast);
   text-decoration: none;
 }
@@ -1734,7 +1742,7 @@ section {
   border-color: var(--ifrc-red);
   color: #FFFFFF;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(224, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(224, 0, 0, 0.45);
 }
 
 .brand-symbol {
@@ -1755,7 +1763,7 @@ section {
   font-size: 0.9375rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -1768,28 +1776,54 @@ section {
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
 .footer-links a {
-  color: #B0C0D0;
+  color: #CBD5E1;
+  font-size: 0.875rem;
+  font-weight: 500;
   transition: var(--transition-fast);
   display: inline-block;
 }
 
 .footer-links a:hover {
-  color: #FFFFFF;
+  color: #FF5252;
   transform: scale(1.05);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
-  margin-top: 50px;
-  font-size: 0.8125rem;
-  text-align: center;
-  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 26px 0 10px 0;
+  margin-top: 45px;
+  font-size: 0.85rem;
+  color: #E2E8F0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-copyright-text {
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+.footer-copyright-text strong {
+  color: #FFFFFF;
+}
+
+.footer-bottom-links a {
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-links a:hover {
+  color: #FF5252;
+  text-decoration: underline;
 }
 
 /* ==========================================================================
