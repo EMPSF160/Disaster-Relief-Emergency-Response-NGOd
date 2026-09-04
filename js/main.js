@@ -29,14 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Segmented Capsule Nav Active Item Click Switcher
-  const capsuleNavItems = document.querySelectorAll('.capsule-nav-item');
-  capsuleNavItems.forEach(item => {
-    item.addEventListener('click', () => {
-      capsuleNavItems.forEach(n => n.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
+  // Initialize ScrollSpy for Capsule & Mobile Navigation
+  initScrollSpy();
 
   // Mobile Menu Auto-close when clicking any anchor link
   const offcanvasEl = document.getElementById('mobileNavDrawer');
@@ -65,6 +59,122 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Counter Animations
   initCounterAnimations();
 });
+
+/* ==========================================================================
+   0. Dynamic ScrollSpy & Navigation Active Highlighter
+   ========================================================================== */
+function initScrollSpy() {
+  const capsuleItems = document.querySelectorAll('.capsule-nav-item');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  const trackedSections = [
+    { id: 'top', el: document.getElementById('top') || document.getElementById('hero'), desktopId: 'top' },
+    { id: 'about-us', el: document.getElementById('about-us'), desktopId: 'about-us' },
+    { id: 'disaster-map-section', el: document.getElementById('disaster-map-section'), desktopId: 'disaster-map-section' },
+    { id: 'emergency-appeals', el: document.getElementById('emergency-appeals'), desktopId: 'emergency-appeals' },
+    { id: 'relief-programs', el: document.getElementById('relief-programs'), desktopId: 'relief-programs' },
+    { id: 'photojournalism-gallery', el: document.getElementById('photojournalism-gallery'), desktopId: 'photojournalism-gallery' },
+    { id: 'operations-analytics', el: document.getElementById('operations-analytics'), desktopId: 'photojournalism-gallery' },
+    { id: 'stories-news', el: document.getElementById('stories-news'), desktopId: 'stories-news' },
+    { id: 'donate-gateway', el: document.getElementById('donate-gateway'), desktopId: 'stories-news' },
+    { id: 'contact-operations', el: document.getElementById('contact-operations'), desktopId: 'contact-operations' }
+  ].filter(item => item.el !== null);
+
+  let isClickScrolling = false;
+  let clickTimeout = null;
+
+  function updateActiveNav(activeId) {
+    const sectionObj = trackedSections.find(s => s.id === activeId) || { id: activeId, desktopId: activeId };
+    const desktopTargetId = sectionObj.desktopId || activeId;
+
+    capsuleItems.forEach(item => {
+      const href = item.getAttribute('href');
+      if (href === '#' + desktopTargetId || (desktopTargetId === 'top' && (href === '#top' || href === '#hero'))) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === '#' + activeId || (activeId === 'top' && (href === '#top' || href === '#hero'))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  function handleScrollSpy() {
+    if (isClickScrolling) return;
+
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    // At the bottom of page -> activate contact
+    if (windowHeight + scrollY >= docHeight - 80) {
+      updateActiveNav('contact-operations');
+      return;
+    }
+
+    // Near top of page -> activate home
+    if (scrollY < 180) {
+      updateActiveNav('top');
+      return;
+    }
+
+    const headerOffset = 140;
+    let currentId = 'top';
+
+    for (let i = 0; i < trackedSections.length; i++) {
+      const sec = trackedSections[i];
+      if (sec.id === 'top') continue;
+
+      const top = sec.el.getBoundingClientRect().top + scrollY - headerOffset;
+      if (scrollY >= top) {
+        currentId = sec.id;
+      }
+    }
+
+    updateActiveNav(currentId);
+  }
+
+  // Handle click on all anchor links
+  const allNavLinks = document.querySelectorAll('.capsule-nav-item, .mobile-nav-link');
+  allNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+
+      const targetId = href.substring(1);
+      updateActiveNav(targetId);
+
+      isClickScrolling = true;
+      clearTimeout(clickTimeout);
+      clickTimeout = setTimeout(() => {
+        isClickScrolling = false;
+        handleScrollSpy();
+      }, 900);
+    });
+  });
+
+  // Attach throttled scroll listener
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScrollSpy();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Run on initial load
+  handleScrollSpy();
+}
 
 /* ==========================================================================
    1. Three.js Interactive Humanitarian 3D Globe
